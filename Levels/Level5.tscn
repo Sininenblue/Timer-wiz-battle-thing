@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Obstacles/Spikes/Spike.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/LevelComplete/LevelComplete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Tilemap/TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Obstacles/Bowman/Bowman.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Tilemap/Background.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Extras/Extras.tscn" type="PackedScene" id=8]
+
+[node name="Level5" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource( 6 )]
+
+[node name="TileMap" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( 0, 1, 65541, 1, 1, 262146, 2, 1, 262146, 3, 1, 262146, 4, 1, 262146, 5, 1, 262146, 6, 1, 262146, 7, 1, 262146, 8, 1, 262146, 9, 1, 262146, 10, 1, 262146, 11, 1, 262146, 12, 1, 262146, 13, 1, 262146, 14, 1, 262146, 15, 1, 262146, 16, 1, 262146, 17, 1, 262146, 18, 1, 262146, 19, 1, 262146, 20, 1, 262146, 21, 1, 262146, 22, 1, 262146, 23, 1, 65544, 65536, 1, 131076, 65559, 1, 131076, 131072, 1, 131076, 131095, 1, 131076, 196608, 1, 131076, 196631, 1, 131076, 262144, 1, 131076, 262167, 1, 131076, 327680, 1, 131076, 327683, 1, 262148, 327686, 1, 262148, 327689, 1, 262148, 327691, 1, 65537, 327692, 1, 65539, 327703, 1, 131076, 393216, 1, 131076, 393227, 1, 131073, 393228, 1, 131075, 393239, 1, 131076, 458752, 1, 131076, 458763, 1, 131073, 458764, 1, 131075, 458775, 1, 131076, 524288, 1, 131076, 524299, 1, 131072, 524300, 1, 131075, 524311, 1, 131076, 589824, 1, 131076, 589835, 1, 131073, 589836, 1, 131075, 589847, 1, 131076, 655360, 1, 131076, 655371, 1, 196609, 655372, 1, 196611, 655383, 1, 131076, 720896, 1, 131076, 720919, 1, 131076, 786432, 1, 196613, 786433, 1, 5, 786434, 1, 4, 786435, 1, 4, 786436, 1, 65538, 786437, 1, 65538, 786438, 1, 3, 786439, 1, 2, 786440, 1, 4, 786441, 1, 65539, 786446, 1, 65537, 786447, 1, 3, 786448, 1, 65538, 786449, 1, 4, 786450, 1, 4, 786451, 1, 2, 786452, 1, 65538, 786453, 1, 4, 786454, 1, 65538, 786455, 1, 196616, 851968, 1, 196609, 851969, 1, 196610, 851970, 1, 196610, 851971, 1, 196610, 851972, 1, 196610, 851973, 1, 196610, 851974, 1, 196610, 851975, 1, 196610, 851976, 1, 196610, 851977, 1, 196611, 851982, 1, 196609, 851983, 1, 196610, 851984, 1, 196610, 851985, 1, 196610, 851986, 1, 196610, 851987, 1, 196610, 851988, 1, 196610, 851989, 1, 196610, 851990, 1, 196610, 851991, 1, 196611 )
+
+[node name="Extras" parent="TileMap" instance=ExtResource( 8 )]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 56, 192 )
+
+[node name="LevelComplete" parent="." instance=ExtResource( 2 )]
+position = Vector2( 328, 184 )
+node_path = "res://Levels/Level6.tscn"
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Spike" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 232, 192 )
+
+[node name="Spike7" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 176, 160 )
+rotation = -1.57079
+
+[node name="Spike2" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 248, 192 )
+
+[node name="Spike3" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 264, 192 )
+
+[node name="Spike5" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 304, 192 )
+
+[node name="Bowman" parent="." instance=ExtResource( 5 )]
+position = Vector2( 352, 64 )
+
+[node name="Dialogue" parent="." instance=ExtResource( 7 )]
+
+[node name="Label" parent="Dialogue" index="0"]
+bbcode_text = "[shake rate=10 level=10]YOU!!![/shake] how does it feel to have your own citezens against you!"
+text = "YOU!!! how does it feel to have your own citezens against you!"
+
+[editable path="Dialogue"]

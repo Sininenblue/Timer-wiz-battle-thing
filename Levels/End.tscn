@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Objects/Tilemap/TileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Tilemap/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=3]
+
+[node name="End" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" parent="." instance=ExtResource( 2 )]
+
+[node name="Dialogue" parent="." instance=ExtResource( 3 )]
+
+[node name="Label" parent="Dialogue" index="0"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -25.5
+margin_right = 45.0
+margin_bottom = 25.5
+bbcode_text = "   You Win
+   [wave amp=50 freq=2]Thanks for playing[/wave]"
+text = "   You Win
+   Thanks for playing"
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 262145, 1, 65537, 262146, 1, 65539, 327680, 1, 65537, 327681, 1, 196615, 327682, 1, 131075, 393216, 1, 131072, 393217, 1, 131074, 393218, 1, 131075, 458752, 1, 131072, 458753, 1, 131074, 458754, 1, 131075, 458773, 1, 65540, 524288, 1, 131073, 524289, 1, 131074, 524290, 1, 131075, 524309, 1, 131076, 589824, 1, 131072, 589825, 1, 131074, 589826, 1, 131075, 589842, 1, 65540, 589845, 1, 196613, 589846, 1, 65539, 655360, 1, 131073, 655361, 1, 131074, 655362, 1, 196614, 655363, 1, 65539, 655378, 1, 196613, 655379, 1, 65539, 655381, 1, 131073, 655382, 1, 131075, 720896, 1, 131073, 720897, 1, 131074, 720898, 1, 131074, 720899, 1, 196614, 720900, 1, 65539, 720914, 1, 131072, 720915, 1, 131075, 720917, 1, 131073, 720918, 1, 196614, 720919, 1, 65539, 786432, 1, 131073, 786433, 1, 131074, 786434, 1, 131074, 786435, 1, 131074, 786436, 1, 196614, 786437, 1, 65539, 786450, 1, 131073, 786451, 1, 196614, 786452, 1, 2, 786453, 1, 196615, 786454, 1, 131074, 786455, 1, 131075, 851968, 1, 196609, 851969, 1, 196610, 851970, 1, 196610, 851971, 1, 196610, 851972, 1, 196610, 851973, 1, 262150, 851974, 1, 262146, 851975, 1, 262147, 851986, 1, 196609, 851987, 1, 196610, 851988, 1, 196610, 851989, 1, 196610, 851990, 1, 196610, 851991, 1, 196611 )
+
+[editable path="Dialogue"]
