@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ontiva.com_-_Synthesia_-The-Time-Machine-OST-Piano-version-256k.ogg-49b2161990576fd1e688e61f5a235320.oggstr"
+
+[deps]
+
+source_file="res://Sounds/ontiva.com_-_Synthesia_-The-Time-Machine-OST-Piano-version-256k.ogg"
+dest_files=[ "res://.import/ontiva.com_-_Synthesia_-The-Time-Machine-OST-Piano-version-256k.ogg-49b2161990576fd1e688e61f5a235320.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
