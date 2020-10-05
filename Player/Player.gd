@@ -80,6 +80,7 @@ func _physics_process(delta):
 				
 				if coyotetimer.time_left != 0 and jumpbuffer.time_left != 0:
 					_spawn_jump_particles(-x_input)
+					jumpsfx.play()
 					jumpbuffer.stop()
 					coyotetimer.stop()
 					velocity.y = -jump 
@@ -91,6 +92,7 @@ func _physics_process(delta):
 				velocity.x = lerp(velocity.x, x_input * speed, .2)
 				
 				if Input.is_action_just_pressed("ui_up"):
+					jumpsfx.play()
 					_spawn_jump_particles(wall_direction)
 					velocity = Vector2(jump * -wall_direction, -jump * 5)
 				
@@ -196,6 +198,8 @@ func _ray_collisions():
 		on_wall = false
 
 func kill():
+	$CollisionShape2D.set_deferred("disabled", true)
+	bellsfx.play()
 	clockanim.play("Pding")
 	_spawn_death_particles()
 	camera.add_trauma(.2)
@@ -205,6 +209,7 @@ func kill():
 
 func win():
 	$CollisionShape2D.set_deferred("disabled", true)
+	bellsfx.play()
 	camera.add_trauma(.1)
 	set_physics_process(false)
 
